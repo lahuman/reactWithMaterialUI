@@ -1,68 +1,97 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+이 프로겍트는 REACTJS + MeterialUI를 사용하는 연습을 하고 있습니다.
 
-In the project directory, you can run:
 
-### `npm start`
+우선 기본 프로젝트의 틀은 아래의 동작을 진행하였습니다.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# #1 ReactJS 프로젝트 생성하기
 
-### `npm test`
+```
+$ npx create-react-app hello-meterialui
+$ cd hello-meterialui
+```
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# #2 [Meterial-ui 모듈 설치하기](https://material-ui.com/getting-started/installation/)
 
-### `npm run build`
+```
+$ npm install --save @material-ui/core
+$ npm install --save @material-ui/icons
+$ npm install --save @material-ui/styles
+```
+## cssbaseline & styleProvider 정보
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. [StylesProvider](https://material-ui.com/styles/advanced/#css-injection-order)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+2. [CssBaseline](https://material-ui.com/components/css-baseline/#css-baseline)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+# #3 추가 모듈 설치 하기 - Option
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ npm install —save styled-components
+```
+## [styled-components](https://www.styled-components.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## [styled-components example](https://www.gatsbyjs.org/docs/styled-components/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# #4 .eslint 설정 (.eslintrc.js) - Option
+```
+module.exports = {
+  "extends": "react-app",
+  "globals": {
+  },
+  "rules": {
+      "no-console": "off",
+      "no-constant-condition": "off",
+      "no-unreachable": "off",
+      "no-empty": "off",
+      "no-useless-escape": "off",
+      "no-throw-literal": "off",
+      "no-unused-vars": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-redeclare": "off",
+      "react/jsx-no-duplicate-props": ["warn", { "ignoreCase": false }],
+      "no-unused-expressions": "off"
+  }
+};
+```
+---
 
-## Learn More
+# #5. 한글 폰트 사용(1)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### src/index.css body에 **font-family** 추가 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+body {
+  margin: 0;
+  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'NanumBarunGothic', '맑은 고딕',
+    'Malgun Gothic', '굴림', 'Gulim', '돋움', 'Dotum', 'Helvetica Neue',
+    'Helvetica', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+---
 
-### Code Splitting
+# #5. 한글 폰트 사용(2)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### public/index.html 에 webfont 추가
 
-### Analyzing the Bundle Size
+```
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+---
 
-### Making a Progressive Web App
+# #6 Template Material UI
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+## [Material UI Template](https://material-ui.com/getting-started/templates/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
