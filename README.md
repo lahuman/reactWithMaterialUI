@@ -31,7 +31,7 @@ $ npm install --save @material-ui/styles
 # #3 추가 모듈 설치 하기 - Option
 
 ```
-$ npm install —save styled-components
+$ npm install --save styled-components
 ```
 ## [styled-components](https://www.styled-components.com/)
 
